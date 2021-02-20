@@ -1,7 +1,7 @@
 from functools import wraps
 from typing import Optional
 
-from tg_bot.modules.helper_funcs.misc import is_module_loaded
+from Hero.modules.helper_funcs.misc import is_module_loaded
 
 FILENAME = __name__.rsplit(".", 1)[-1]
 
@@ -11,9 +11,9 @@ if is_module_loaded(FILENAME):
     from telegram.ext import CommandHandler, run_async
     from telegram.utils.helpers import escape_markdown
 
-    from tg_bot import dispatcher, LOGGER
-    from tg_bot.modules.helper_funcs.chat_status import user_admin
-    from tg_bot.modules.sql import log_channel_sql as sql
+    from Hero import dispatcher, LOGGER
+    from Hero.modules.helper_funcs.chat_status import user_admin
+    from Hero.modules.sql import log_channel_sql as sql
 
 
     def loggable(func):
