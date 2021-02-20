@@ -5,18 +5,18 @@ from telegram import ParseMode, Update, Bot, Chat, User
 from telegram.ext import CommandHandler, RegexHandler, Filters
 from telegram.utils.helpers import escape_markdown
 
-from tg_bot import dispatcher
-from tg_bot.modules.helper_funcs.handlers import CMD_STARTERS
-from tg_bot.modules.helper_funcs.misc import is_module_loaded
+from Hero import dispatcher
+from Hero.modules.helper_funcs.handlers import CMD_STARTERS
+from Hero.modules.helper_funcs.misc import is_module_loaded
 
 FILENAME = __name__.rsplit(".", 1)[-1]
 
 # If module is due to be loaded, then setup all the magical handlers
 if is_module_loaded(FILENAME):
-    from tg_bot.modules.helper_funcs.chat_status import user_admin, is_user_admin
+    from Hero.modules.helper_funcs.chat_status import user_admin, is_user_admin
     from telegram.ext.dispatcher import run_async
 
-    from tg_bot.modules.sql import disable_sql as sql
+    from Hero.modules.sql import disable_sql as sql
 
     DISABLE_CMDS = []
     DISABLE_OTHER = []
