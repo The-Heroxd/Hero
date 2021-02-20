@@ -1,7 +1,7 @@
-##Credit
+## Credit
 Credit of this bot goes to [Marie](https://github.com/TGExplore/Marie-2.0-English) thanks to them and their [team](https://t.me/MarieChechi) without their work this fork is not possible support them by Donating on [paypal](http://paypal.me/PaulSonOfLars) or [Monzo](http://monzo.me/paulnionvestergaardlarsen).
 
-##Info
+## Info
 A modular telegram Python bot running on python3 with an sqlalchemy database.
 
 A simple group management bot with some fun plugins 
