@@ -1,4 +1,4 @@
-from tg_bot import LOAD, NO_LOAD, LOGGER
+from Hero import LOAD, NO_LOAD, LOGGER
 
 
 def __list_all_modules():
