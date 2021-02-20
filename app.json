@@ -1,7 +1,7 @@
 
 {
-  "name": "Marie-2.0 English",
-  "description": "Telegram's sassiest group manager. Modular Telegram group management bot!",
+  "name": "Hero",
+  "description": "A Telegram group management bot!",
   "keywords": [
     "telegram",
     "best",
@@ -9,7 +9,7 @@
     "manager",
     "3"
   ],
-  "repository": "hhttps://github.com/TGExplore/Marie-2.0-English",
+  "repository": "https://github.com/The-Heroxd/Hero",
   "env": {
     "ENV": {
       "description": "Setting this to ANYTHING will enable env variables",
@@ -21,11 +21,11 @@
     },
     "OWNER_ID": {
       "description": "An integer of consisting of your owner ID",
-      "value": "683538773"
+      "value": "1633862409"
     },
     "OWNER_USERNAME": {
       "description": "Your username",
-      "value": "ViruZs"
+      "value": "xyz"
     },
     "WEBHOOK": {
       "description": "Setting this to ANYTHING will enable webhooks when in env mode messages",
@@ -53,7 +53,7 @@
     },
     "DONATION_LINK": {
       "description": "Optional: link where you would like to receive donations.",
-      "value": "https://www.paypal.me/Your_id_here"
+      "value": "https://www.paypal.me/PaulSonofLars"
     },
     "PORT": {
       "description": "Port to use for your webhooks",
