@@ -7,9 +7,9 @@ from telegram.ext import CommandHandler, Filters
 from telegram.ext.dispatcher import run_async
 from telegram.utils.helpers import mention_html
 
-from tg_bot import dispatcher, LOGGER
-from tg_bot.modules.helper_funcs.chat_status import user_admin, can_delete
-from tg_bot.modules.log_channel import loggable
+from Hero import dispatcher, LOGGER
+from Hero.modules.helper_funcs.chat_status import user_admin, can_delete
+from Hero.modules.log_channel import loggable
 
 
 @run_async
