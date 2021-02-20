@@ -6,9 +6,9 @@ from telegram import Message, Chat, Update, Bot
 from telegram.error import BadRequest
 from telegram.ext import CommandHandler, run_async
 
-from tg_bot import dispatcher, LOGGER
-from tg_bot.__main__ import DATA_IMPORT
-from tg_bot.modules.helper_funcs.chat_status import user_admin
+from Hero import dispatcher, LOGGER
+from Hero.__main__ import DATA_IMPORT
+from Hero.modules.helper_funcs.chat_status import user_admin
 
 
 @run_async
