@@ -42,7 +42,7 @@ Hello! my name *{}*.
 And the following:
 """.format(dispatcher.bot.first_name, "" if not ALLOW_EXCL else "\nAll of the following commands  / or ! can  be used...\n")
 
-HERO_IMG = "https://telegra.ph/file/1183b87c08561f56692f0.jpg"
+HERO_IMG = "https://telegra.ph/file/51813d5862b22288dd7c9.jpg"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
 It took lots of work for [my creator](t.me/SonOfLars) to get me to where I am now, and every donation helps \
