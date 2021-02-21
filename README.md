@@ -1,4 +1,4 @@
-![Hero](https://telegra.ph/file/1183b87c08561f56692f0.jpg) #Hero
+![Hero](https://telegra.ph/file/1183b87c08561f56692f0.jpg) ## Hero
 
 ## Credit
 Credit of this bot goes to [Marie](https://github.com/TGExplore/Marie-2.0-English) thanks to them and their [team](https://t.me/MarieChechi) without their work this fork is not possible support them by Donating on [paypal](http://paypal.me/PaulSonOfLars) or [Monzo](http://monzo.me/paulnionvestergaardlarsen).
