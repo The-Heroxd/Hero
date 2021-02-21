@@ -1,10 +1,10 @@
 ![Hero](https://telegra.ph/file/1183b87c08561f56692f0.jpg) 
 ## Hero
 
-## Credit
+### Credit
 Credit of this bot goes to [Marie](https://github.com/TGExplore/Marie-2.0-English) thanks to them and their [team](https://t.me/MarieChechi) without their work this fork is not possible support them by Donating on [paypal](http://paypal.me/PaulSonOfLars) or [Monzo](http://monzo.me/paulnionvestergaardlarsen).
 
-## Info
+### Info
 A modular telegram Python bot running on python3 with an sqlalchemy database.
 
 A simple group management bot with some fun plugins 
@@ -12,18 +12,18 @@ A simple group management bot with some fun plugins
 Can be found of telegram as [Hero](Https://telegram.me/Herosecuritybot). Updates [Channel](https://telegram.me/hero_ot). Any queries contact at [Support Group](https://telegram.me/herosupportchat)
 
 
-## You can also tap the Deploy To Heroku button below to deploy straight to Heroku!
+### You can also tap the Deploy To Heroku button below to deploy straight to Heroku!
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/The-Heroxd/Hero)
 
-## Starting the bot.
+### Starting the bot.
 
 Once you've setup your database and your configuration (see below) is complete, simply run:
 
-`python3 -m tg_bot`
+`python3 -m Hero`
 
 
-## Setting up the bot (Read this before trying to use!):
+### Setting up the bot (Read this before trying to use!):
 Please make sure to use python3.6, as I cannot guarantee everything will work as expected on older python versions!
 This is because markdown parsing is done by iterating through a dict, which are ordered by default in 3.6.
 
