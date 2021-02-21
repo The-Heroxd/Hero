@@ -19,7 +19,7 @@
       "description": "Your bot token, as a string.",
       "value": ""
     },
-    "IMG": {
+    "HERO_IMG": {
      "description": "Url of Start Image",
      "value": "https://telegra.ph/file/1183b87c08561f56692f0.jpg"
     },
