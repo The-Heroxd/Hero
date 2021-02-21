@@ -1,4 +1,4 @@
-![Hero](https://telegra.ph/file/51813d5862b22288dd7c9.jpg) 
+[![Hero](https://telegra.ph/file/c178cf535889054d34c33.jpg)](https://telegram.me/Hero_ot) 
 ## Hero
 
 ### Credit
