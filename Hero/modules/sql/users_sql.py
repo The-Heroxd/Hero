@@ -2,8 +2,8 @@ import threading
 
 from sqlalchemy import Column, Integer, UnicodeText, String, ForeignKey, UniqueConstraint, func
 
-from tg_bot import dispatcher
-from tg_bot.modules.sql import BASE, SESSION
+from Hero import dispatcher
+from Hero.modules.sql import BASE, SESSION
 
 
 class Users(BASE):
