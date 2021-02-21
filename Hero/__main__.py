@@ -18,18 +18,11 @@ from Hero.modules.helper_funcs.chat_status import is_user_admin
 from Hero.modules.helper_funcs.misc import paginate_modules
 
 PM_START_TEXT = """
-hoi {}, my name is {}! if you have any questions about how to use me please give me /help... 
+Hello {}, my name is *{}*
 
-im a group manager bot maintained by  [this person](tg://user?id={}).
+A powerful group manager bot. Helps you to manage your groups..
 
-My future updates will be put into This Channel - @MarieChechi & My Support Group @InFoTelGroup.
-
-This is my [Deploy Code](https://heroku.com/deploy?template=https://github.com/TGExplore/Marie-2.0-English),
-you can create clone same like me..
-
-For more commands click /help...
-
-**Keep in mind that any changes you DO do to the source have to be on github, as per the license.**
+To see my commands click /help...
 
 """
 
@@ -38,16 +31,18 @@ HELP_STRINGS = """
 Hello! my name *{}*.
 
 *Main* available commands:
- - /start: Start the bot...
- - /help: help....
- - /donate: To find out more about donating!
- - /settings:
-   - in PM: To find out what SETTINGS you have set....
-   - in a group:
+ 🔥 /start: Start the bot...
+ 🔥 /help: help....
+ 🔥 /donate: To find out more about donating!
+ 🔥 /settings:
+   🔹️ in PM: To find out what SETTINGS you have set....
+   🔹️ in a group:
 
 {}
 And the following:
 """.format(dispatcher.bot.first_name, "" if not ALLOW_EXCL else "\nAll of the following commands  / or ! can  be used...\n")
+
+HERO_IMG = "https://telegra.ph/file/1183b87c08561f56692f0.jpg"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
 It took lots of work for [my creator](t.me/SonOfLars) to get me to where I am now, and every donation helps \
@@ -67,7 +62,7 @@ CHAT_SETTINGS = {}
 USER_SETTINGS = {}
 
 for module_name in ALL_MODULES:
-    imported_module = importlib.import_module("tg_bot.modules." + module_name)
+    imported_module = importlib.import_module("Hero.modules." + module_name)
     if not hasattr(imported_module, "__mod_name__"):
         imported_module.__mod_name__ = imported_module.__name__
 
@@ -140,12 +135,14 @@ def start(bot: Bot, update: Update, args: List[str]):
                 IMPORTED["rules"].send_rules(update, args[0], from_pm=True)
 
         else:
-            first_name = update.effective_user.first_name
-            update.effective_message.reply_text(
-                PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_ID),
-                parse_mode=ParseMode.MARKDOWN)
-    else:
-        update.effective_message.reply_text("waked up😏😏😏")
+            first_name = update.effective_user.first_name 
+    text = PM_START_TEXT
+
+    keyboard = [[InlineKeyboardButton(text="📜Source Code📜",url="https://github.com/The-Heroxd/Hero"),InlineKeyboardButton(text="🔥Support🔥",url="https://t.me/herosupportchat")]]
+    keyboard += [[InlineKeyboardButton(text="🔰Updates🔰",url="https://t.me/Hero_ot"),InlineKeyboardButton(text="✳Add Me✳",url="http://t.me/{}?startgroup=true".format(bot.username))]]
+
+    update.effective_message.reply_photo(HERO_IMG, PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_ID), 
+                                         reply_markup=InlineKeyboardMarkup(keyboard), disable_web_page_preview=True, parse_mode=ParseMode.MARKDOWN)
 
 
 # for test purposes
@@ -237,9 +234,8 @@ def get_help(bot: Bot, update: Update):
 
         update.effective_message.reply_text("Contact me in PM to get the list of possible commands.",
                                             reply_markup=InlineKeyboardMarkup(
-                                                [[InlineKeyboardButton(text="Help",
-                                                                       url="t.me/{}?start=help".format(
-                                                                           bot.username))]]))
+                                                [[InlineKeyboardButton(text="⚜️Help⚜",url="t.me/{}?start=help".format(bot.username))],  
+                                                [InlineKeyboardButton(text="🔥Support🔥",url="https://t.me/Hero_ot")]]))
         return
 
     elif len(args) >= 2 and any(args[1].lower() == x for x in HELPABLE):
@@ -356,7 +352,7 @@ def get_settings(bot: Bot, update: Update):
             text = "Click here to get this chat's settings, as well as yours."
             msg.reply_text(text,
                            reply_markup=InlineKeyboardMarkup(
-                               [[InlineKeyboardButton(text="Settings",
+                               [[InlineKeyboardButton(text="⚙Settings⚙",
                                                       url="t.me/{}?start=stngs_{}".format(
                                                           bot.username, chat.id))]]))
         else:
